@@ -1,5 +1,5 @@
 //扩展id
-var extension_id = "bfpafjgbeaafloinkjifblnjgelpkgpf";
+var extension_id = "bahmaphgocmfpmlkpmcimhgbpdjkjdlo";
 //替换的目标地址，里面的%s代替原始搜索内容
 var replace_url = "http://see.sl088.com/w/index.php?search=%s&title=%E7%89%B9%E6%AE%8A%3A%E6%90%9C%E7%B4%A2";
 
@@ -11,7 +11,7 @@ function chkfixurl(tabId, changeInfo, tab) {
 	//跳转地址
 	if (tab.url.match(replace_patern)) {
 		// 修理后的url
-		var fix_url = replace_url.replace(tab.url.match(replace_patern)[1]);
+		var fix_url = replace_url.replace("%s", tab.url.match(replace_patern)[1]);
 
 		chrome.tabs.update(tabId, {
 			url: fix_url //修理url
@@ -23,9 +23,7 @@ function chkfixurl(tabId, changeInfo, tab) {
 };
 
 //显示icon图标
-
 function show_icon(tabId) {
-	//通常性的全显示
 	chrome.pageAction.show(tabId);
 }
 
