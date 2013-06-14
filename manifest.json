@@ -19,5 +19,5 @@
 	"homepage_url": "http://see.sl088.com",
 	"manifest_version": 2,
 	"version": "0.6.14",
-	"minimum_chrome_version": "20"
+	"minimum_chrome_version": "18"
 }
